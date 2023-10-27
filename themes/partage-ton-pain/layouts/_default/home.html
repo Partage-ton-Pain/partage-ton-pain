@@ -1,3 +1,6 @@
 {{ define "main" }}
+<div class="announcement">
   {{ .Content }}
+</div>
+{{ partial "hero.html" (dict "title" .Title "subtitle" .Params.subtitle "cta" .Params.cta) }}
 {{ end }}
