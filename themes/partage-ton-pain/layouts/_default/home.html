@@ -1,6 +1,11 @@
 {{ define "main" }}
-<div class="announcement">
-  {{ .Content }}
-</div>
-{{ partial "hero.html" (dict "title" .Title "subtitle" .Params.subtitle "cta" .Params.cta) }}
+
+  <!-- Announcement -->
+  {{ with .Site.GetPage "announcement.md" }}
+    {{ partial "home/announcement.html" (dict "announcement" .Content) }}
+  {{end}}
+
+  <!-- Hero image -->
+  {{ partial "home/hero.html" (dict "title" .Title "subtitle" .Params.subtitle "cta" .Params.cta) }}
+
 {{ end }}

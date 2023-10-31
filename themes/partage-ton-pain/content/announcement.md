@@ -1,0 +1,1 @@
+**Attention** | Ceci est une annonce importante
