@@ -1,0 +1,24 @@
+.hero {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 0 0 30px 30px;
+    position: relative;
+    margin: 0 200px;
+}
+
+.hero-text {
+    color: white;
+    padding: 75px 20px;
+}
+
+.hero-text h1 {
+    font-size: 300%;
+    margin-bottom: 0;
+}
+
+.hero-text p {
+    font-size: 150%;
+    margin-top: 0;
+    margin-bottom: 30px;
+}
