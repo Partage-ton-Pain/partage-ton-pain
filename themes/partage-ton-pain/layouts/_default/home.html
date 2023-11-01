@@ -1,11 +1,13 @@
 {{ define "main" }}
 
   <!-- Announcement -->
-  {{ with .Site.GetPage "announcement.md" }}
+  {{ with .Site.GetPage "home/announcement.md" }}
     {{ partial "home/announcement.html" (dict "announcement" .Content) }}
   {{end}}
 
   <!-- Hero image -->
-  {{ partial "home/hero.html" (dict "title" .Title "subtitle" .Params.subtitle "cta" .Params.cta) }}
+  {{ with .Site.GetPage "home/hero.md" }}
+    {{ partial "home/hero.html" (dict "title" .Title "subtitle" .Params.subtitle "call_to_action" .Params.call_to_action) }}
+  {{end}}
 
 {{ end }}

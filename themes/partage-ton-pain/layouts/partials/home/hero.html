@@ -1,6 +1,6 @@
 {{- $title := .title }}
 {{- $subtitle := .subtitle }}
-{{- $cta := .cta }}
+{{- $call_to_action := .call_to_action }}
 
 {{- with resources.Get "media/hero.jpg"}}
 <div class="hero"
@@ -8,7 +8,7 @@
     <div class="hero-text">
         <h1>{{ $title }}</h1>
         <p>{{ $subtitle }}</p>
-        <a class="button" href="#">{{ $cta }}</a>
+        <a class="button" href="#">{{ $call_to_action }}</a>
     </div>
 </div>
 {{ end }}
