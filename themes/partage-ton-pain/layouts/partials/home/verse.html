@@ -1,0 +1,18 @@
+{{- $title := .title }}
+{{- $book := .book }}
+{{- $reference := .reference }}
+{{- $version := .version }}
+{{- $verse := .verse }}
+
+{{- with resources.Get "media/paper.jpg"}}
+<div class="verse">
+    <h1>{{ $title }}</h1>
+    <div class="verse-text">
+        {{ $verse }}
+        <div class="reference">
+            <span class="reference-book">{{ $book }},</span>
+            <span class="reference-verse">{{ $reference }} ({{ $version }})</span>
+        </div>
+    </div>
+</div>
+{{ end }}

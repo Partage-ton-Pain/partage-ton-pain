@@ -1,3 +1,7 @@
+.home {
+    margin: 0 200px;
+}
+
 .announcement {
     background-color: $accent-color;
 }
@@ -5,6 +9,19 @@
 .announcement p {
     font-size: 90%;
     margin: 0;
-    padding: 5px 200px;
+    padding: 5px 0;
     text-align: center;
+}
+
+.verse {
+    margin: 10px 0;
+}
+
+.verse .verse-text p {
+    font-size: 120%;
+}
+
+.verse .reference .reference-book {
+    font-weight: bold;
+    font-size: 110%;
 }

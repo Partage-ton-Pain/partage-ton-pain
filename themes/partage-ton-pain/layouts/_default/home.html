@@ -1,13 +1,20 @@
 {{ define "main" }}
 
+<div class="home">
   <!-- Announcement -->
   {{ with .Site.GetPage "home/announcement.md" }}
     {{ partial "home/announcement.html" (dict "announcement" .Content) }}
-  {{end}}
+  {{ end }}
 
   <!-- Hero image -->
   {{ with .Site.GetPage "home/hero.md" }}
     {{ partial "home/hero.html" (dict "title" .Title "subtitle" .Params.subtitle "call_to_action" .Params.call_to_action) }}
-  {{end}}
+  {{ end }}
+
+  <!-- Verse -->
+  {{ with .Site.GetPage "home/verse.md" }}
+    {{ partial "home/verse.html" (dict "title" .Params.title "book" .Params.book "reference" .Params.reference "version" .Params.version "verse" .Content) }}
+  {{ end }}
+</div>
 
 {{ end }}
