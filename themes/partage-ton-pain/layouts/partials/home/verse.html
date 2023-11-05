@@ -1,16 +1,14 @@
-{{- $title := .title }}
+{{- $verse := .verse }}
 {{- $book := .book }}
 {{- $reference := .reference }}
 {{- $version := .version }}
-{{- $verse := .verse }}
 
 <div class="verse">
-    <h1>{{ $title }}</h1>
     <div class="verse-text">
         {{ $verse }}
         <div class="reference">
             <span class="reference-book">{{ $book }},</span>
-            <span class="reference-verse">{{ $reference }} ({{ $version }})</span>
+            <span class="reference-verse">{{ $reference }}</span>
         </div>
     </div>
 </div>

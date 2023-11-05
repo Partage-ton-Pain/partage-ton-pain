@@ -13,7 +13,7 @@
 
   <!-- Verse -->
   {{ with .Site.GetPage "home/verse.md" }}
-    {{ partial "home/verse.html" (dict "title" .Params.title "book" .Params.book "reference" .Params.reference "version" .Params.version "verse" .Content) }}
+    {{ partial "home/verse.html" (dict "verse" .Content "book" .Params.book "reference" .Params.reference "version" .Params.version) }}
   {{ end }}
 </div>
 
