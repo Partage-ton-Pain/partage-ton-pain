@@ -1,0 +1,27 @@
+{{ with .Site.GetPage "home/mission" }}
+    <div id="mission">
+        <h1>{{ .Title }}</h1>
+        {{ .Content }}
+        <div class="mission-cards">
+            {{- with .Site.GetPage "home/mission/mission-1.md" }}
+                {{- partial "inline/mission/mission-card.html" (dict "title" .Title "icon" .Params.icon "content" .Content) }}
+            {{ end }}
+            {{- with .Site.GetPage "home/mission/mission-2.md" }}
+                {{- partial "inline/mission/mission-card.html" (dict "title" .Title "icon" .Params.icon "content" .Content) }}
+            {{ end }}
+            {{- with .Site.GetPage "home/mission/mission-3.md" }}
+                {{- partial "inline/mission/mission-card.html" (dict "title" .Title "icon" .Params.icon "content" .Content) }}
+            {{ end }}
+        </div>
+    </div>
+{{ end }}
+
+{{- define "partials/inline/mission/mission-card.html" }}
+    {{- $title := .title }}
+    {{- $icon := .icon}}
+    {{- $content := .content }}
+    <div class="mission-card">
+        <div class="mission-card-title"><span class="mission-card-icon">{{ $icon }}</span> {{ $title }}</div>
+        <div class="mission-card-text">{{ $content }}</div>
+    </div>
+{{ end }}
