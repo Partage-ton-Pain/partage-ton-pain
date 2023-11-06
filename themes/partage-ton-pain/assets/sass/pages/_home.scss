@@ -1,5 +1,5 @@
 .announcement {
-    background-color: $accent-color;
+    background-color: $main-color;
 }
 
 .announcement p {
@@ -60,6 +60,7 @@
 }
 
 .mission-card-title {
+    color: $main-color-dark;
     font-weight: bold;
     font-size: 150%;
     text-align: center;

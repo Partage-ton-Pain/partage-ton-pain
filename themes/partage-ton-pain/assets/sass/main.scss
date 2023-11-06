@@ -1,4 +1,5 @@
-$accent-color: #DEAA87;
+$main-color: #DEAA87;
+$main-color-dark: darken($main-color, 50%);
 
 @import 'ui/button';
 @import 'ui/common';
