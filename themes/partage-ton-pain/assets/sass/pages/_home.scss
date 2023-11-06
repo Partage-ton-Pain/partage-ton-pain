@@ -10,16 +10,20 @@
 }
 
 .verse {
-    margin: 10px 20px;
+    font-size: 120%;
+    margin: 20px;
 }
 
 .verse .verse-text p {
-    font-size: 120%;
+    margin: 0 0 10px 0;
+}
+
+.verse .reference {
+    text-align: right;
 }
 
 .verse .reference .reference-book {
     font-weight: bold;
-    font-size: 110%;
 }
 
 #mission {
