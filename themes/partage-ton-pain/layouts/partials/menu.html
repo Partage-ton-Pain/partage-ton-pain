@@ -12,7 +12,7 @@ Renders a menu for the given menu ID.
 
 <div class="navbar">
   <div class="brand">
-    <a href="/">
+    <a href="{{ .Site.BaseURL | relLangURL }}">
       {{- with resources.Get "media/logo.svg"}}
       <img src="{{ .RelPermalink }}" alt="logo">
       {{ end }}
