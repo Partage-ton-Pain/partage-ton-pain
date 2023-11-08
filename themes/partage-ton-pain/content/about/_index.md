@@ -1,5 +1,6 @@
 +++
 title = 'À propos'
+url = 'a-propos'
 [menu.main]
-    weight = 20
+    weight = 3
 +++

@@ -1,5 +1,6 @@
 +++
 title = 'Faire un don'
+url = 'donner'
 [menu.main]
-    weight = 10
+    weight = 1
 +++
