@@ -1,0 +1,23 @@
+{{ with .Site.GetPage "about/activities.md" }}
+<div>
+    <h2>{{ .Title }}</h2>
+    {{- with .Site.GetPage "about/activities/activity-1.md"  }}
+        {{- partial "inline/about/activity.html" (dict "title" .Title "when" .Params.when "where" .Params.where "description" .Content) }}
+    {{ end }}
+</div>
+{{ end }}
+
+{{- define "partials/inline/about/activity.html" }}
+    {{- $title := .title }}
+    {{- $when := .when }}
+    {{- $where := .where }}
+    {{- $description := .description }}
+    <div>
+        <div>{{ $title }}</div>
+        <div>
+            <div>{{ $when }}</div>
+            <div>{{ $where }}</div>
+        </div>
+        <div>{{ $description }}</div>
+    </div>
+{{ end }}

@@ -1,8 +1,10 @@
 {{ define "main" }}
-
 <div>
-    <h1>{{ .Title }}</h1>
-    {{ .Content }}
+    <div>
+        <h1>{{ .Title }}</h1>
+        {{ .Content }}
+    </div>
+    {{ partial "about/activities.html" . }}
+    {{ partial "about/team.html" . }}
 </div>
-
 {{ end }}
