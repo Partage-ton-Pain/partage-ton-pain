@@ -2,25 +2,26 @@
 <div id="team">
     <h2>{{ .Title }}</h2>
     {{ .Content }}
-
-    {{- with .Site.GetPage "about/team/navin.md" }}
-        {{- partial "inline/about/team-member.html" (dict "firstName" .Params.firstName "lastName" .Params.lastName "role" .Title  "picture" .Params.picture) }}
-    {{ end }}
-    {{- with .Site.GetPage "about/team/laval.md" }}
-        {{- partial "inline/about/team-member.html" (dict "firstName" .Params.firstName "lastName" .Params.lastName "role" .Title  "picture" .Params.picture) }}
-    {{ end }}
-    {{- with .Site.GetPage "about/team/joanna.md" }}
-        {{- partial "inline/about/team-member.html" (dict "firstName" .Params.firstName "lastName" .Params.lastName "role" .Title  "picture" .Params.picture) }}
-    {{ end }}
-    {{- with .Site.GetPage "about/team/emmanuel.md" }}
-        {{- partial "inline/about/team-member.html" (dict "firstName" .Params.firstName "lastName" .Params.lastName "role" .Title  "picture" .Params.picture) }}
-    {{ end }}
-    {{- with .Site.GetPage "about/team/ophny.md" }}
-        {{- partial "inline/about/team-member.html" (dict "firstName" .Params.firstName "lastName" .Params.lastName "role" .Title  "picture" .Params.picture) }}
-    {{ end }}
-    {{- with .Site.GetPage "about/team/achille.md" }}
-        {{- partial "inline/about/team-member.html" (dict "firstName" .Params.firstName "lastName" .Params.lastName "role" .Title "picture" .Params.picture) }}
-    {{ end }}
+    <div id="team-members">
+        {{- with .Site.GetPage "about/team/navin.md" }}
+            {{- partial "inline/about/team-member.html" (dict "firstName" .Params.firstName "lastName" .Params.lastName "role" .Title  "picture" .Params.picture) }}
+        {{ end }}
+        {{- with .Site.GetPage "about/team/laval.md" }}
+            {{- partial "inline/about/team-member.html" (dict "firstName" .Params.firstName "lastName" .Params.lastName "role" .Title  "picture" .Params.picture) }}
+        {{ end }}
+        {{- with .Site.GetPage "about/team/joanna.md" }}
+            {{- partial "inline/about/team-member.html" (dict "firstName" .Params.firstName "lastName" .Params.lastName "role" .Title  "picture" .Params.picture) }}
+        {{ end }}
+        {{- with .Site.GetPage "about/team/emmanuel.md" }}
+            {{- partial "inline/about/team-member.html" (dict "firstName" .Params.firstName "lastName" .Params.lastName "role" .Title  "picture" .Params.picture) }}
+        {{ end }}
+        {{- with .Site.GetPage "about/team/ophny.md" }}
+            {{- partial "inline/about/team-member.html" (dict "firstName" .Params.firstName "lastName" .Params.lastName "role" .Title  "picture" .Params.picture) }}
+        {{ end }}
+        {{- with .Site.GetPage "about/team/achille.md" }}
+            {{- partial "inline/about/team-member.html" (dict "firstName" .Params.firstName "lastName" .Params.lastName "role" .Title "picture" .Params.picture) }}
+        {{ end }}
+    </div>
 </div>
 {{ end }}
 
@@ -30,6 +31,9 @@
     {{- $role := .role }}
     {{- $picture := .picture }}
     <div class="team-member">
+        {{- with resources.Get "media/about/team/navin.png" }}
+            <div class="picture" style="background-image: url('{{ .RelPermalink }}');"></div>
+        {{ end }}
         <div class="name">
             <span>{{ $firstName }}</span>
             <span>{{ $lastName }}</span>

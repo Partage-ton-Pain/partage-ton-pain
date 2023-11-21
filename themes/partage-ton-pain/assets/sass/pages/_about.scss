@@ -5,17 +5,40 @@
                 font-size: 110%;
                 font-weight: bold;
             }
+
             .info {
                 font-size: 90%;
             }
         }
     }
-    #team {
-        .team-member {
-            margin-bottom: 15px;
 
-            .name {
-                font-weight: bold;
+    #team {
+        #team-members {
+            display: flex;
+            flex-wrap: wrap;
+
+            .team-member {
+                border: solid 1px #cccccc;
+                border-radius: 5px;
+                margin: 5px;
+                padding: 10px;
+                width: 200px;
+                text-align: center;
+
+                .picture {
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    background-color: aqua;
+                    border-radius: 50%;
+                    height: 100px;
+                    margin: 0 auto 10px auto;
+                    width: 100px;
+                }
+
+                .name {
+                    font-weight: bold;
+                }
             }
         }
     }
