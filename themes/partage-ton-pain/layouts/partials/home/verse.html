@@ -3,11 +3,11 @@
 {{- $reference := .reference }}
 {{- $version := .version }}
 
-<div class="verse">
-    <div class="verse-text">
+<div id="verse">
+    <div class="text">
         {{ $verse }}
         <div class="reference">
-            — <span class="reference-book">{{ $book }}, </span><span class="reference-verse">{{ $reference }}</span>
+            — <span class="book">{{ $book }}, </span><span class="verse">{{ $reference }}</span>
         </div>
     </div>
 </div>

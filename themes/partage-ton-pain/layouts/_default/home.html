@@ -1,6 +1,6 @@
 {{ define "main" }}
 
-<div class="home">
+<div id="home">
   <!-- Announcement -->
   {{ with .Site.GetPage "home/announcement.md" }}
     {{ partial "home/announcement.html" (dict "announcement" .Content) }}

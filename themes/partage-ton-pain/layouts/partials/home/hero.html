@@ -3,9 +3,9 @@
 {{- $call_to_action := .call_to_action }}
 
 {{- with resources.Get "media/home/hero.jpg"}}
-<div class="hero"
+<div id="hero"
     style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('{{ .RelPermalink }}');">
-    <div class="hero-text">
+    <div class="text">
         <h1>{{ $title }}</h1>
         <p>{{ $subtitle }}</p>
         <a class="button" href="#mission">{{ $call_to_action }}</a>
