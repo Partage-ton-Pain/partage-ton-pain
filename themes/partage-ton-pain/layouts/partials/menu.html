@@ -10,7 +10,7 @@ Renders a menu for the given menu ID.
 {{- $page := .page }}
 {{- $menuID := .menuID }}
 
-<div class="navbar">
+<div id="navbar">
   <div class="brand">
     <a href="{{ .Site.BaseURL | relLangURL }}">
       {{- with resources.Get "media/logo.svg"}}
@@ -22,7 +22,7 @@ Renders a menu for the given menu ID.
     {{- with index site.Menus $menuID }}
     <ul>
       <li>
-        <a href="https://www.sandbox.paypal.com/donate?hosted_button_id=ML4YZ9CEMHNWL" target="_blank">
+        <a class="button" href="https://www.sandbox.paypal.com/donate?hosted_button_id=ML4YZ9CEMHNWL" target="_blank">
           Faire un don
         </a>
       </li>

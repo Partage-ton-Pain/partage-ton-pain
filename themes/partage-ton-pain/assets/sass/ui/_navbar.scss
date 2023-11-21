@@ -1,23 +1,25 @@
-.navbar {
+#navbar {
     box-sizing: border-box;
     display: flex;
     padding: 10px 0;
     width: 100%;
-}
 
-.navbar .brand img {
-    height: 50px;
-}
+    .brand {
+        img {
+            height: 50px;
+        }
+    }
 
-.navbar .items {
-    margin-left: auto;
-}
+    .items {
+        margin-left: auto;
 
-.navbar .items ul {
-    list-style-type: none;
-}
+        ul {
+            list-style-type: none;
 
-.navbar .items ul li {
-    float: left;
-    margin-right: 20px;
+            li {
+                float: left;
+                margin-right: 20px;
+            }
+        }
+    }
 }
