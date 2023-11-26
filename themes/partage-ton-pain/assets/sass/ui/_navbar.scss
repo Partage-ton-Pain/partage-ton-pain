@@ -1,6 +1,8 @@
 #navbar {
+    align-items: center;
     box-sizing: border-box;
     display: flex;
+    flex-wrap: wrap;
     padding: 10px 0;
     width: 100%;
 
@@ -19,6 +21,69 @@
             li {
                 float: left;
                 margin-right: 20px;
+            }
+        }
+    }
+
+    .hamburger-icon,
+    .hamburger-checkbox,
+    .hamburger-items {
+        display: none;
+    }
+
+    @media only screen and (max-width: 768px) {
+        .items {
+            display: none;
+        }
+
+        .hamburger-icon {
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: 30px 30px;
+            display: block;
+            margin-left: auto;
+            height: 30px;
+            width: 30px;
+        }
+
+        .hamburger-items {
+            display: none;
+        }
+
+        .hamburger-checkbox {
+            cursor: pointer;
+            display: block;
+            height: 30px;
+            width: 30px;
+            margin-left: -35px;
+            opacity: 0;
+
+            &:checked {
+                ~.hamburger-items {
+                    background-color: rgb(235, 235, 235);
+                    border-radius: 10px;
+                    display: block;
+                    padding-top: 10px;
+                    width: 100%;
+                    text-align: center;
+
+                    ul {
+                        list-style-type: none;
+                        padding: 0;
+
+                        li {
+                            width: 100%;
+                        }
+
+                        .donation-button {
+                            margin-bottom: 20px;
+                        }
+
+                        .page-link {
+                            margin-bottom: 15px;
+                        }
+                    }
+                }
             }
         }
     }

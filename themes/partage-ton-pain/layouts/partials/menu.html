@@ -19,18 +19,32 @@ Renders a menu for the given menu ID.
     </a>
   </div>
   <div class="items">
-    {{- with index site.Menus $menuID }}
-    <ul>
-      <li>
-        <a class="button" href="https://www.sandbox.paypal.com/donate?hosted_button_id=ML4YZ9CEMHNWL" target="_blank">
-          Faire un don
-        </a>
-      </li>
-      {{- partial "inline/menu/walk.html" (dict "page" $page "menuEntries" .) }}
-    </ul>
-    {{- end }}
+    {{- partial "inline/menu/items.html" (dict "menuID" $menuID "page" $page) }}
   </div>
+  {{- with resources.Get "media/icons/hamburger.svg"}}
+    <span class="hamburger-icon" style="background-image: url('{{ .RelPermalink }}');"></span>
+    <input class="hamburger-checkbox" type="checkbox" />
+    <div class="hamburger-items">
+      {{- partial "inline/menu/items.html" (dict "menuID" $menuID "page" $page) }}
+    </div>
+  {{ end }}
 </div>
+
+{{- define "partials/inline/menu/items.html" }}
+  {{- $menuID := .menuID }}
+  {{- $page := .page }}
+
+  {{- with index site.Menus $menuID }}
+  <ul>
+    <li class="donation-button">
+      <a class="button" href="https://www.sandbox.paypal.com/donate?hosted_button_id=ML4YZ9CEMHNWL" target="_blank">
+        Faire un don
+      </a>
+    </li>
+    {{- partial "inline/menu/walk.html" (dict "page" $page "menuEntries" .) }}
+  </ul>
+  {{- end }}
+{{ end }}
 
 {{- define "partials/inline/menu/walk.html" }}
   {{- $page := .page }}
@@ -41,7 +55,7 @@ Renders a menu for the given menu ID.
   {{- else if $page.HasMenuCurrent .Menu .}}
     {{- $attrs = merge $attrs (dict "class" "ancestor" "aria-current" "true") }}
   {{- end }}
-  <li>
+  <li class="page-link">
     <a {{- range $k, $v :=$attrs }} {{- with $v }} {{- printf " %s=%q" $k $v | safeHTMLAttr }} {{- end }} {{- end -}}>{{
       or (T .Identifier) .Name | safeHTML }}</a>
     {{- with .Children }}

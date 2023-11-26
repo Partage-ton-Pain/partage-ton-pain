@@ -15,7 +15,6 @@
         background-repeat: no-repeat;
         background-size: cover;
         border-radius: 0 0 30px 30px;
-        position: relative;
 
         .text {
             color: white;
@@ -93,7 +92,6 @@
                     flex-direction: column;
                     margin-top: 10px;
                     margin-bottom: -125px;
-                    z-index: 100;
                 }
                 .title {
                     color: $main-color-dark;
