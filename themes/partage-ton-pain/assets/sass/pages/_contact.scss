@@ -10,6 +10,10 @@
     margin: 2rem auto;
     padding: 2rem;
 
+    @media only screen and (max-width: 768px) {
+        width: auto;
+    }
+
     .form-group {
         display: flex;
         flex-direction: column;
