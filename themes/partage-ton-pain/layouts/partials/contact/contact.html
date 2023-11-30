@@ -1,18 +1,32 @@
 <form id="contact" action="https://formsubmit.co/5a056f5db22e57eddb31344be2c58f79" method="POST">
+    {{- with .Site.GetPage "contact/form.md" }}
+        {{ partial "inline/contact/content.html" (dict "name" .Params.name "email" .Params.email "message" .Params.message "btn" .Params.btn) }}
+    {{ end }}
+</form> 
+
+{{- define "partials/inline/contact/content.html" }}
+    {{- $name := .name }}
+    {{- $email := .email }}
+    {{- $message := .message }}
+    {{- $btn := .btn }}
+    
+    <input type="text" name="_honey" style="display:none">
+    <input type="hidden" name="_next" value="">
+
     <div class="form-group">
-        <label for="name">Nom</label>
-        <input class="form-control" type="text" name="name" required>
+        <label for="name">{{ $name }}</label>
+        <input class="form-control" type="text" name="{{ $name }}" required>
     </div>
 
     <div class="form-group">
-        <label for="email">Courriel</label>
-        <input class="form-control" type="email" name="email" required>
+        <label for="email">{{ $email }}</label>
+        <input class="form-control" type="email" name="{{ $email }}" required>
     </div>
 
     <div class="form-group">
-        <label for="message">Message</label>
-        <textarea class="form-control message" id="message" name="message" required></textarea>
+        <label for="message">{{ $message }}</label>
+        <textarea class="form-control message" id="message" name="{{ $message }}" required></textarea>
     </div>
     
-    <button class="button" type="submit">Soumettre</button>
-</form> 
+    <button class="button" type="submit">{{ $btn }}</button>
+{{ end }}
