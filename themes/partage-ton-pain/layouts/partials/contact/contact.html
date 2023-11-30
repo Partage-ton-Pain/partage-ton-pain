@@ -5,14 +5,11 @@
 </form> 
 
 {{- define "partials/inline/contact/content.html" }}
-    {{ $successPage := .Site.GetPage "success.html" }}
     {{- $name := .name }}
     {{- $email := .email }}
     {{- $message := .message }}
     {{- $btn := .btn }}
     
-    <input type="text" name="_honey" style="display:none">
-
     <div class="form-group">
         <label for="name">{{ $name }}</label>
         <input class="form-control" type="text" name="{{ $name }}" required>
