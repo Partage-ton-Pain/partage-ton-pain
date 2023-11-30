@@ -1,0 +1,54 @@
+#contact {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(auto-fill, 1fr);
+    row-gap: 1rem;
+    border: 1px solid $main-color;
+    border-radius: 1rem;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.10);
+    width: 75vh;
+    margin: 2rem auto;
+    padding: 2rem;
+
+    .form-group {
+        display: flex;
+        flex-direction: column;
+    }
+
+    label {
+        font-size: 1.1rem;
+        line-height: 2;
+    }
+
+    .form-control {
+        padding: .5rem;
+        border: 1px solid $main-color;
+
+        &:hover, &:focus {
+            outline: none;
+            border-color: $main-color-dark;
+        }
+
+        &.message {
+            min-height: 6rem
+        }
+    }
+
+    .button {
+        border: none;
+        margin-top: 1rem;
+        color: #ffffff;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: background 250ms ease-in-out, 
+                    transform 150ms ease;
+
+        &:active {
+            transform: scale(0.99);
+        }
+
+        &:hover {
+            background-color: darken($main-color, 10%);
+        }
+    }
+}

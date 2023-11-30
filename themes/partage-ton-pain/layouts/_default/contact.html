@@ -3,6 +3,8 @@
 <div>
     <h1>{{ .Title }}</h1>
     {{ .Content }}
+
+    {{ partial "contact/contact.html" . }}
 </div>
 
 {{ end }}
