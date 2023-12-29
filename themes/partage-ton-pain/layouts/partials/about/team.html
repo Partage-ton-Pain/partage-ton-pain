@@ -1,6 +1,6 @@
 {{ with .Site.GetPage "about/team.md" }}
 <div id="team">
-    <h2>{{ .Title }}</h2>
+    <div class="title">{{ .Title }}</div>
     {{ .Content }}
     <div id="team-members">
         {{- with .Site.GetPage "about/team/navin.md" }}

@@ -1,8 +1,16 @@
 #about {
+    #title {
+        h1 {
+            font-size: 250%;
+            margin: 0;
+            padding-top: 20px;
+        }
+    }
+
     #activities {
         .activity {
             .title {
-                font-size: 110%;
+                font-size: 150%;
                 font-weight: bold;
             }
 
@@ -13,6 +21,11 @@
     }
 
     #team {
+        .title {
+            font-size: 150%;
+            font-weight: bold;
+        }
+        
         #team-members {
             display: flex;
             flex-wrap: wrap;

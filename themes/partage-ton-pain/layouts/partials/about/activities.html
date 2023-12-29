@@ -1,6 +1,5 @@
 {{ with .Site.GetPage "about/activities.md" }}
 <div id="activities">
-    <h2>{{ .Title }}</h2>
     {{- with .Site.GetPage "about/activities/activity-1.md"  }}
         {{- partial "inline/about/activity.html" (dict "title" .Title "when" .Params.when "where" .Params.where "description" .Content) }}
     {{ end }}
