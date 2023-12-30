@@ -1,12 +1,13 @@
 <form id="contact" action="https://formsubmit.co/5a056f5db22e57eddb31344be2c58f79" method="POST">
     {{- with .Site.GetPage "contact/form.md" }}
-        {{ partial "inline/contact/content.html" (dict "name" .Params.name "email" .Params.email "message" .Params.message "btn" .Params.btn) }}
+        {{ partial "inline/contact/content.html" (dict "name" .Params.name "email" .Params.email "emailInfo" .Params.emailInfo "message" .Params.message "btn" .Params.btn) }}
     {{ end }}
 </form> 
 
 {{- define "partials/inline/contact/content.html" }}
     {{- $name := .name }}
     {{- $email := .email }}
+    {{- $emailInfo := .emailInfo }}
     {{- $message := .message }}
     {{- $btn := .btn }}
     
@@ -17,6 +18,7 @@
 
     <div class="form-group">
         <label for="email">{{ $email }}</label>
+        <small>{{ $emailInfo }}</small>
         <input class="form-control" type="email" name="{{ $email }}" required>
     </div>
 

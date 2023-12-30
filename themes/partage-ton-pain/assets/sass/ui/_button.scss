@@ -1,7 +1,20 @@
 .button {
     background-color: $main-color;
+    border: none;
     border-radius: 3px;
+    cursor: pointer;
+    font-size: inherit;
     color: $main-color-dark;
     font-weight: 600;
     padding: 10px 20px;
+    transition: background 250ms ease-in-out,
+        transform 150ms ease;
+
+    &:active {
+        transform: scale(0.99);
+    }
+
+    &:hover {
+        background-color: darken($main-color, 10%);
+    }
 }
