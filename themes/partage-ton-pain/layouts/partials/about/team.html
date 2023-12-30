@@ -30,8 +30,9 @@
     {{- $lastName := .lastName }}
     {{- $role := .role }}
     {{- $picture := .picture }}
+
     <div class="team-member">
-        {{- with resources.Get "media/about/team/navin.png" }}
+        {{- with resources.Get ( printf "media/about/team/%s.png" $picture ) }}
             <div class="picture" style="background-image: url('{{ .RelPermalink }}');"></div>
         {{ end }}
         <div class="name">

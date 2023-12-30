@@ -1,5 +1,5 @@
 +++
-title = 'Distributions de nourriture'
+title = '🥖 Distributions de nourriture'
 when = 'Tous les derniers samedis du mois'
 where = 'Métro de Montréal'
 +++
