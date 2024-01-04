@@ -1,5 +1,5 @@
 +++
-title = 'Membre du C.A.'
+title = 'Secrétaire adjoint'
 firstName = 'Achille'
 lastName = 'Dizoe'
 picture = 'achille'
