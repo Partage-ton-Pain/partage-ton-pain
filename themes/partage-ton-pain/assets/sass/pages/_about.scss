@@ -1,4 +1,7 @@
 #about {
+    .section {
+        margin-bottom: 20px;
+    }
 
     #activities {
         .activity {
@@ -10,6 +13,28 @@
             .info {
                 font-size: 90%;
             }
+
+            .pictures {
+                display: flex;
+                overflow-x: scroll;
+
+                .frame {
+                    border: solid 1px #cccccc;
+                    border-radius: 5px;
+                    margin-right: 10px;
+                    padding: 7px;
+                    width: fit-content;
+
+                    .picture {
+                        background-position: center;
+                        background-repeat: no-repeat;
+                        background-size: cover;
+                        border-radius: 3px;
+                        height: 200px;
+                        width: 300px;
+                    }
+                }
+            }
         }
     }
 
@@ -18,7 +43,7 @@
             font-size: 150%;
             font-weight: bold;
         }
-        
+
         #team-members {
             display: flex;
             flex-wrap: wrap;

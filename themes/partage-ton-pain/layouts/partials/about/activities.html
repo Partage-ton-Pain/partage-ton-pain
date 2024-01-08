@@ -1,5 +1,5 @@
 {{ with .Site.GetPage "about/activities.md" }}
-<div id="activities">
+<div id="activities" class="section">
     {{- with .Site.GetPage "about/activities/activity-1.md"  }}
         {{- partial "inline/about/activity.html" (dict "title" .Title "when" .Params.when "where" .Params.where "description" .Content) }}
     {{ end }}
@@ -18,5 +18,17 @@
             <div class="place">{{ $where }}</div>
         </div>
         <div class="description">{{ $description }}</div>
+        <div class="pictures">
+            {{- with resources.Get "media/about/activities/distribution-1.jpg" }}
+                <div class="frame">
+                    <div class="picture" style="background-image: url('{{ .RelPermalink }}');"></div>
+                </div>
+            {{ end }}
+            {{- with resources.Get "media/about/activities/distribution-2.jpg" }}
+                <div class="frame">
+                    <div class="picture" style="background-image: url('{{ .RelPermalink }}');"></div>
+                </div>
+            {{ end }}
+        </div>
     </div>
 {{ end }}
