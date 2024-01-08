@@ -14,6 +14,10 @@
                 font-size: 90%;
             }
 
+            .pictures::-webkit-scrollbar {
+                display: none;
+            }
+
             .pictures {
                 display: flex;
                 overflow-x: scroll;
