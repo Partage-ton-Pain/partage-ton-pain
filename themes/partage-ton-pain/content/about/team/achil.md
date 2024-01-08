@@ -1,6 +1,6 @@
 +++
 title = 'Secrétaire adjoint'
-firstName = 'Achille'
+firstName = 'Achil'
 lastName = 'Dizoe'
-picture = 'achille'
+picture = 'achil'
 +++

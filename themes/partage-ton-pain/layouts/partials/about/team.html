@@ -12,14 +12,14 @@
         {{- with .Site.GetPage "about/team/joanna.md" }}
             {{- partial "inline/about/team-member.html" (dict "firstName" .Params.firstName "lastName" .Params.lastName "role" .Title  "picture" .Params.picture) }}
         {{ end }}
+        {{- with .Site.GetPage "about/team/achil.md" }}
+            {{- partial "inline/about/team-member.html" (dict "firstName" .Params.firstName "lastName" .Params.lastName "role" .Title "picture" .Params.picture) }}
+        {{ end }}
         {{- with .Site.GetPage "about/team/emmanuel.md" }}
             {{- partial "inline/about/team-member.html" (dict "firstName" .Params.firstName "lastName" .Params.lastName "role" .Title  "picture" .Params.picture) }}
         {{ end }}
         {{- with .Site.GetPage "about/team/ophny.md" }}
             {{- partial "inline/about/team-member.html" (dict "firstName" .Params.firstName "lastName" .Params.lastName "role" .Title  "picture" .Params.picture) }}
-        {{ end }}
-        {{- with .Site.GetPage "about/team/achille.md" }}
-            {{- partial "inline/about/team-member.html" (dict "firstName" .Params.firstName "lastName" .Params.lastName "role" .Title "picture" .Params.picture) }}
         {{ end }}
     </div>
 </div>
