@@ -1,0 +1,6 @@
+{{ with .Site.GetPage "about/join.md" }}
+<div id="join" class="section">
+    <div class="title">{{ .Title }}</div>
+    {{ .Content }}
+</div>
+{{ end }}
