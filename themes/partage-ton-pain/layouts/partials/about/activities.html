@@ -14,8 +14,7 @@
     <div class="activity">
         <div class="title">{{ $title }}</div>
         <div class="info">
-            <div class="date">{{ $when }}</div>
-            <div class="place">{{ $where }}</div>
+            <span class="place">{{ $where }}</span>, <span class="date">{{ $when }}</span>
         </div>
         <div class="description">{{ $description }}</div>
         <div class="pictures">
@@ -25,6 +24,16 @@
                 </div>
             {{ end }}
             {{- with resources.Get "media/about/activities/distribution-2.jpg" }}
+                <div class="frame">
+                    <div class="picture" style="background-image: url('{{ .RelPermalink }}');"></div>
+                </div>
+            {{ end }}
+            {{- with resources.Get "media/about/activities/distribution-3.jpg" }}
+                <div class="frame">
+                    <div class="picture" style="background-image: url('{{ .RelPermalink }}');"></div>
+                </div>
+            {{ end }}
+            {{- with resources.Get "media/about/activities/distribution-4.jpg" }}
                 <div class="frame">
                     <div class="picture" style="background-image: url('{{ .RelPermalink }}');"></div>
                 </div>
