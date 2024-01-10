@@ -14,8 +14,10 @@
                 font-size: 90%;
             }
 
-            .pictures::-webkit-scrollbar {
-                display: none;
+            @media only screen and (min-width: 768px) {
+                .pictures::-webkit-scrollbar {
+                    display: none;
+                }
             }
 
             .pictures {
