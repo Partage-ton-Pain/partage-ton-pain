@@ -1,4 +1,3 @@
-baseURL = 'https://example.org/'
-languageCode = 'en-us'
+baseURL = 'https://www.partagetonpain.ca/'
+languageCode = 'fr-ca'
 title = 'Partage ton Pain'
-theme = 'partage-ton-pain'
