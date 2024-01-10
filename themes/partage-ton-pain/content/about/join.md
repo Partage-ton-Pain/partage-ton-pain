@@ -5,4 +5,4 @@ Vous avez à coeur d'aider? Vous aimeriez partager la Bonne Nouvelle du salut en
 
 Pour nous soutenir:
 - Contactez-nous via [ce formulaire]({{< relref "contact" >}})
-- Faites-nous un don en cliquant sur [ce lien](https://www.paypal.com/donate/?hosted_button_id=W5RWYT8QGTPPY).
+- Faites-nous un don en cliquant sur [ce lien]({{< relref "donate" >}}).

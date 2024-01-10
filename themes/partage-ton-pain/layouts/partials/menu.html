@@ -36,11 +36,6 @@ Renders a menu for the given menu ID.
 
   {{- with index site.Menus $menuID }}
   <ul>
-    <li class="donation-button">
-      <a class="button" href="https://www.paypal.com/donate/?hosted_button_id=W5RWYT8QGTPPY" target="_blank">
-        Faire un don
-      </a>
-    </li>
     {{- partial "inline/menu/walk.html" (dict "page" $page "menuEntries" .) }}
   </ul>
   {{- end }}
@@ -56,8 +51,9 @@ Renders a menu for the given menu ID.
     {{- $attrs = merge $attrs (dict "class" "ancestor" "aria-current" "true") }}
   {{- end }}
   <li class="page-link">
-    <a {{- range $k, $v :=$attrs }} {{- with $v }} {{- printf " %s=%q" $k $v | safeHTMLAttr }} {{- end }} {{- end -}}>{{
-      or (T .Identifier) .Name | safeHTML }}</a>
+    <a {{ with .Params.class -}} class="{{ . }}" {{ end -}} {{- range $k, $v :=$attrs }} {{- with $v }} {{- printf " %s=%q" $k $v | safeHTMLAttr }} {{- end }} {{- end -}}>
+      {{or (T .Identifier) .Name | safeHTML }}
+    </a>
     {{- with .Children }}
     <ul>
       {{- partial "inline/menu/walk.html" (dict "page" $page "menuEntries" .) }}
