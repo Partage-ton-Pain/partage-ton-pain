@@ -1,4 +1,18 @@
 baseURL = 'https://www.partagetonpain.ca/'
-languageCode = 'fr-ca'
 title = 'Partage ton Pain'
 description = 'Partage ton Pain est une organisation à but non lucratif ayant pour objectif de venir en aide aux plus démunis. Basée à Montréal, elle agit partout à travers le Canada. En plus d’apporter une aide alimentaire et matérielle à ceux qui en ont besoin, elle apporte le bien le plus précieux qui existe: la Bonne Nouvelle du salut en Jésus-Christ.'
+defaultContentLanguageInSubdir = true
+
+[languages]
+    [languages.fr]
+        contentDir = 'content/fr'
+        disabled = false
+        languageCode = 'fr-CA'
+        languageDirection = 'ltr'
+        languageName = 'Français'   
+    [languages.en]
+        contentDir = 'content/en'
+        disabled = false
+        languageCode = 'en-CA'
+        languageDirection = 'ltr'
+        languageName = 'English'
