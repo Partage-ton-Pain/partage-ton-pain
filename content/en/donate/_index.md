@@ -7,6 +7,4 @@ donation_url = 'https://www.paypal.com/donate/?hosted_button_id=W5RWYT8QGTPPY'
     [menu.main.params]
       class = 'button'
 +++
-*You will be redirected to the donation platform...*
-
-If the page does not load, [click here]({{< param "donation_url" >}}).
+Thank you for considering donating to our cause. You can donate in two ways.

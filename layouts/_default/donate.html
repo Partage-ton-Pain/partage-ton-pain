@@ -3,10 +3,14 @@
 <h1>{{ .Title }}</h1>
 {{ .Content }}
 
-{{- with .Params.donation_url }}
-<script>
-    window.location.replace('{{ . }}');
-</script>
-{{- end }}
+<div id="donate">
+    {{ with .Site.GetPage "donate/interac.md" }}
+        {{ partial "donate/option.html" (dict "title" .Title "content" .Content) }}
+    {{ end }}
+
+    {{ with .Site.GetPage "donate/paypal.md" }}
+        {{ partial "donate/option.html" (dict "title" .Title "content" .Content) }}
+    {{ end }}
+</div>
 
 {{ end }}
